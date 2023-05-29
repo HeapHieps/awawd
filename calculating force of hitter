@@ -1,0 +1,5 @@
+local force = (part.Velocity - hit.Velocity).Magnitude
+
+					if part.Velocity.Magnitude < hit.Velocity.Magnitude and force > 40 and not part:GetAttribute("Debounce") then
+						part:SetAttribute("Debounce", true)
+						part:SetAttribute("Health", part:GetAttribute("Health") - 1)
